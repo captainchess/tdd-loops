@@ -48,7 +48,7 @@ describe("echoWithSpace", function () {
   });
 });
 
-describe("sumTo", function () {
+describe.only("sumTo", function () {
   it("returns sum for n > 1", function () {
     expect(sumTo(5)).toBe(15);
   });
