@@ -89,6 +89,11 @@ export function sumTo(n) {
  */
 export function sumFromTo(a, z) {
   // TODO
+  let sum = 0;
+  for (let i = a; i <= z; i+=1) {
+    sum += i;
+  }
+  return sum;
 }
 
 /**
