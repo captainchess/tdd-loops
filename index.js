@@ -37,6 +37,22 @@ export function echo(word, n) {
  */
 export function echoWithSpace(word, n) {
   // TODO
+  if (n <= 0) {
+    return '';
+  }
+  if (word === '') {
+    return '';
+  }
+
+  let wordEcho;
+  for (let i = 0; i < n; i+=1) {
+    if (i === 0) {
+      wordEcho = word;
+    } else {
+      wordEcho += ` ${word}`;
+    }
+  }
+  return wordEcho;
 }
 
 /**
