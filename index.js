@@ -12,6 +12,15 @@
  */
 export function echo(word, n) {
   // TODO
+  if (n <= 0) {
+    return '';
+  }
+
+  let wordEcho = word;
+  for (let i = 1; i < n; i+=1) {
+     wordEcho += word;
+  }
+  return wordEcho;
 }
 
 /**
