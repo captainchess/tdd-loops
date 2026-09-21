@@ -109,6 +109,9 @@ export function sumFromTo(a, z) {
  */
 export function countdown(n) {
   // TODO
+  for (let i = n; i > 0; i-=1) {
+    console.log(i);
+  }
 }
 
 /**
