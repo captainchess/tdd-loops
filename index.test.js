@@ -148,7 +148,7 @@ describe("getGrowthTime", function () {
   });
 });
 
-describe.only("getCompoundTime", function () {
+describe("getCompoundTime", function () {
   it("returns undefined if start <= 0", function () {
     expect(getCompoundTime(0, 0.1, 100)).toBeUndefined();
     expect(getCompoundTime(-100, 0.1, 100)).toBeUndefined();
@@ -171,7 +171,7 @@ describe.only("getCompoundTime", function () {
   });
 });
 
-describe("moveWater", function () {
+describe.only("moveWater", function () {
   it("returns undefined if colander <= 0", () => {
     expect(moveWater(0, 10)).toBeUndefined();
     expect(moveWater(-3, 10)).toBeUndefined();

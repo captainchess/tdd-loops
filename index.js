@@ -12,14 +12,12 @@
  */
 export function echo(word, n) {
   // TODO
-  if (n <= 0) {
-    return '';
-  }
+  let wordEcho = '';
 
-  let wordEcho = word;
-  for (let i = 1; i < n; i+=1) {
+  for (let i = 0; i < n; i+=1) {
      wordEcho += word;
   }
+  
   return wordEcho;
 }
 
@@ -44,14 +42,11 @@ export function echoWithSpace(word, n) {
     return '';
   }
 
-  let wordEcho;
+  let wordEcho = '';
   for (let i = 0; i < n; i+=1) {
-    if (i === 0) {
-      wordEcho = word;
-    } else {
-      wordEcho += ` ${word}`;
-    }
+    wordEcho += i < n - 1 ? `${word} ` : word;
   }
+  
   return wordEcho;
 }
 
