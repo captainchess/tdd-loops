@@ -46,7 +46,7 @@ export function echoWithSpace(word, n) {
   for (let i = 0; i < n; i+=1) {
     wordEcho += i < n - 1 ? `${word} ` : word;
   }
-  
+
   return wordEcho;
 }
 
@@ -221,6 +221,26 @@ export function getCompoundTime(start, rate, target) {
  */
 export function moveWater(colander, bucket) {
   // TODO
+  if (colander <= 0) {
+    return;
+  } else if (bucket <= 0) {
+    return 0;
+  } else if (colander === 1) {
+    return bucket;
+  } else if (colander >= bucket) {
+    return 1;
+  }
+
+  let trips = 0;
+  let cupsInBucket = 0;
+  
+  while (cupsInBucket < bucket) {
+    cupsInBucket += colander;
+    colander = colander > 1 ? colander - 1 : colander;
+    trips+=1;
+  }
+
+  return trips;
 }
 
 /**
