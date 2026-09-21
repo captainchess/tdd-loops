@@ -129,7 +129,7 @@ describe("sumOddsToN", function () {
   });
 });
 
-describe.only("getGrowthTime", function () {
+describe("getGrowthTime", function () {
   it("returns undefined if start <= 0", function () {
     expect(getGrowthTime(0, 10)).toBeUndefined();
     expect(getGrowthTime(-5, 10)).toBeUndefined();
@@ -148,7 +148,7 @@ describe.only("getGrowthTime", function () {
   });
 });
 
-describe("getCompoundTime", function () {
+describe.only("getCompoundTime", function () {
   it("returns undefined if start <= 0", function () {
     expect(getCompoundTime(0, 0.1, 100)).toBeUndefined();
     expect(getCompoundTime(-100, 0.1, 100)).toBeUndefined();

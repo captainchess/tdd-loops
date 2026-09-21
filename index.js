@@ -188,6 +188,18 @@ export function getGrowthTime(start, target) {
  */
 export function getCompoundTime(start, rate, target) {
   // TODO
+  if (start <= 0 || (rate * 10) <= 0) {
+    return;
+  } else if (start === target) {
+    return 0;
+  }
+
+  let count = 0;
+  while (start <= target) {
+    start = start + (start * rate);
+    count+=1;
+  }
+  return count;
 }
 
 /**
